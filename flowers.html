@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers - Channa Flowering Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Channa Flowering Shop</h1>
+                
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+<form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+      <section class="products">
+    <!-- Product 1 -->
+    <div class="product">
+        <img src="images/rose.jpeg" alt="Flower Rose">
+        <div class="description">
+            <h3>Flower Rose</h3>
+            <p>₱100</p>
+            <button onclick="addToCart('Flower Rose')">Buy</button>
+            <button onclick="addToCart('Flower Rose')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <img src="images/small-tree-diy.jpg" alt="Small Tree DIY">
+        <div class="description">
+            <h3>Small Tree DIY</h3>
+            <p>₱200</p>
+            <button onclick="addToCart('Small Tree DIY')">Buy</button>
+            <button onclick="addToCart('Small Tree DIY')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+        <img src="images/flower-bouquets.jpeg" alt="Flower Bouquets">
+        <div class="description">
+            <h3>Flower Bouquets</h3>
+            <p>₱500</p>
+            <button onclick="addToCart('Flower Bouquets')">Buy</button>
+            <button onclick="addToCart('Flower Bouquets')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>©2024 Aleexis Pejana</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

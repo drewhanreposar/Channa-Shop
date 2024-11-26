@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    /* Your existing CSS styles */
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #111;
+        width: 100%;
+        overflow: hidden;
+    }
+     .back-button {
+        position: absolute;
+        top: 10px; /* Adjust top position as needed */
+        left: 10%; /* Center the button horizontally */
+        transform: translateX(-50%); /* Center the button horizontally */
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+
+    .ring {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ring i {
+        position: absolute;
+        inset: 0;
+        border: 2px solid #fff;
+        transition: 0.5s;
+    }
+
+    .ring i:nth-child(1) {
+        border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+        animation: animate 6s linear infinite;
+    }
+
+    .ring i:nth-child(2) {
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: animate 4s linear infinite;
+    }
+
+    .ring i:nth-child(3) {
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: animate2 10s linear infinite;
+    }
+
+    .ring:hover i {
+        border: 6px solid var(--clr);
+        filter: drop-shadow(0 0 20px var(--clr));
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .login {
+        position: absolute;
+        width: 280px; /* Adjusted width for the login box */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px; /* Reduced gap between elements */
+    }
+
+    .login h2 {
+        font-size: 1.8em; /* Reduced font size for the heading */
+        color: #fff;
+    }
+
+    .login .inputBx {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin bottom for spacing */
+    }
+
+    .login .inputBx input,
+    .login .inputBx select {
+        position: relative;
+        width: 100%;
+        padding: 10px 15px; /* Adjusted padding for inputs and selects */
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 15px; /* Reduced border radius */
+        font-size: 1em; /* Reduced font size for inputs and selects */
+        color: #fff;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .login .inputBx input[type="submit"] {
+        width: 100%;
+        padding: 10px 0; /* Adjusted padding for the submit button */
+        font-size: 1em; /* Reduced font size for the submit button */
+        background: #0078ff;
+        background: linear-gradient(45deg, #ff357a, #fff172); /* Gradient background */
+        border: none;
+        cursor: pointer;
+        color: #fff; /* Text color */
+        border-radius: 15px; /* Border radius */
+    }
+
+    .login .inputBx input::placeholder {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .login .inputBx select option {
+        background: #111;
+        color: #fff;
+    }
+
+    .login .inputBx label {
+        color: #fff;
+    }
+
+    .login .links {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .login .links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9em; /* Reduced font size for the links */
+    }
+</style>
+</head>
+<body>
+    <a href="index.html" class="back-button">&lt;Back </Back></a> <!-- Back button to HAHAHAHA -->
+<div class="ring">
+  <i style="--clr:#00ff0a;"></i>
+  <i style="--clr:#ff0057;"></i>
+  <i style="--clr:#fffd44;"></i>
+  <div class="login">
+    <h2>SignUp</h2>
+    <form id="loginForm">
+      <div class="inputBx">
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="inputBx">
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="inputBx">
+        <input type="tel" placeholder="Contact Number" required>
+      </div>
+      <div class="inputBx">
+        <input type="password" placeholder="Password" required>
+      </div>
+      <div class="inputBx">
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="male">Secret</option>
+        </select>
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Sign in">
+      </div>
+    </form>
+    <div class="links">
+      <a href="Forgotpassword.html">Forgot Password</a>
+      <a href="Registration.html">Back to Log In</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    window.location.href = "Home.html"; // Redirect to the other folder
+  });
+</script>
+</body>
+</html>
